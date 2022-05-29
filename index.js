@@ -1,64 +1,60 @@
 // TODO: Buatlah data dari kedua user di sini
 // Tentukan tipe data dan struktur data yang menurut kalian tepat
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
+
+// Monica
+const warnaMonica = ["Yellow", "Pink", "White", "Purple"];
+const restoMonica = ["Bento", "Sushi", "Pancake", "Eggy", "Tempura", "Bento", "Eggy", "Padang", "Tteok", "Sushi", "Sushi"];
+
+let setColorMonica = new Set(warnaMonica);
+let setRestoMonica = new Set(restoMonica);
+
+const educationMonica = [
+  { name: "SD 01", city: "Jakarta", graduate: "2016" },
+  { name: "SMP 02", city: "Jakarta", graduate: "2019" },
+  { name: "SMA 03", city: "Tangerang" },
+];
+
+// Wendy
+const warnaWendy = ["Blue", "Black", "Grey"];
+const restoWendy = ["Tempura", "Bento", "Sushi", "Pancake", "Padang", "Katsu", "Geprek", "Pancake", "Eggy"];
+
+let setColorWendy = new Set(warnaWendy);
+let setRestoWendy = new Set(restoWendy);
+
+const educationWendy = [
+  { name: "SD 02", city: "Jakarta", graduate: "2010" },
+  { name: "SMP 03", city: "Bogor", graduate: "2013" },
+  { name: "SMA 01", city: "Surabaya", graduate: "2016" },
+  { name: "Universitas Maju", city: "Tangerang" },
+];
+
 const firstUser = {
   name: "Monica",
-  dender: "Female",
+  gender: "Female",
   age: 17,
   email: "monica@dingdong.com",
-  favoriteColor: ["Yellow", "Pink", "White", "Purple"],
+  favoriteColor: [...setColorMonica],
   isHavePet: "Yes",
-  education: [
-    {
-      name: "SD 01",
-      city: "Jakarta",
-      graduate: 2016,
-    },
-    {
-      name: "SMP 02",
-      city: "Jakarta",
-      graduate: 2019,
-    },
-    {
-      name: "SMA 03",
-      city: "Tangerang",
-    },
-  ],
-  favoriteRestaurant: ["Bento", "Sushi", "Pancake", "Eggy", "Tempura", "Bento", "Eggy", "Padang", "Tteok", "Sushi", "Sushi"],
+  education: educationMonica,
+  favoriteRestaurant: [...setRestoMonica],
 };
+
 const secondUser = {
   name: "Wendy",
-  dender: "Male",
+  gender: "Male",
   age: 23,
   email: "wendy@dingdong.com",
-  favoriteColor: ["Blue", "Black", "Grey"],
+  favoriteColor: [...setColorWendy],
   isHavePet: "No",
-  education: [
-    {
-      name: "SD 02",
-      city: "Jakarta",
-      graduate: 2010,
-    },
-    {
-      name: "SMP 03",
-      city: "Bogor",
-      graduate: 2013,
-    },
-    {
-      name: "SMA 01",
-      city: "Surabaya",
-      graduate: 2016,
-    },
-    {
-      name: "Universitas Maju",
-      city: "Tangerang",
-    },
-  ],
-  favoriteRestaurant: ["Tempura", "Bento", "Sushi", "Pancake", "Padang", "Katsu", "Geprek", "Pancake", "Eggy"],
+  education: educationWendy,
+  favoriteRestaurant: [...setRestoWendy],
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
-const users = [firstUser, secondUser];
+const users = [];
+users.push(firstUser);
+users.push(secondUser);
 
 // ! JANGAN MODIFIKASI LINE DI BAWAH
 function main() {
